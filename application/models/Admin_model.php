@@ -5,12 +5,14 @@ class Admin_model extends CI_Model
 {
     public function getSkripsiPsik()
     {
-        return $this->db->get_where('data_skripsi', ['prodi' => 'PSIK'])->result_array();
+        $Query = " SELECT * FROM data_skripsi WHERE prodi = 'PSIK' ORDER BY id DESC ";
+        return $result = $this->db->query($Query)->result_array();
     }
 
     public function getSkripsiKesmas()
     {
-        return $this->db->get_where('data_skripsi', ['prodi' => 'KESMAS'])->result_array();
+        $Query = " SELECT * FROM data_skripsi WHERE prodi = 'KESMAS' ORDER BY id DESC ";
+        return $result = $this->db->query($Query)->result_array();
     }
 
     public function getSkripsiLabel()
@@ -146,7 +148,7 @@ class Admin_model extends CI_Model
         $tahun = $_POST['tahun'];
         $pembimbing1 = $_POST['pembimbing1'];
         $pembimbing2 = $_POST['pembimbing2'];
-        $Query = " UPDATE data_skripsi SET npm = '$npm', nama = '$nama', judul = '$judul', jumlah = '$jumlah', prodi = '$prodi', tahun = '$tahun', pembimbing_1 = '$pembimbing1', pembimbing_2 = '$pembimbing2'  WHERE id = $id";
+        $Query = " UPDATE data_skripsi SET npm = '$npm', nama = '$nama', judul = '$judul', jumlah = '$jumlah', prodi = '$prodi', tahun = '$tahun', pembimbing_1 = '$pembimbing1', pembimbing_2 = '$pembimbing2', cetak_status = 0  WHERE id = $id";
         return $this->db->query($Query);
     }
 }

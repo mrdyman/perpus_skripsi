@@ -1,12 +1,6 @@
 <!-- Begin Page Content -->
 <div class="container-fluid">
 
-    <!-- Page Heading -->
-    <!-- <h1 class="h3 mb-4 text-gray-800"><?= $title; ?></h1> -->
-    <div class="text-right">
-        <a href="<?= base_url('admin/cetaklabelpsik'); ?>" target="_blank" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Cetak Label</a>
-    </div>
-
     <div class="row">
         <div class="col-lg">
 
@@ -39,7 +33,6 @@
                                     <th scope="col">Tahun</th>
                                     <th scope="col" style="width: 13%">Pembimbing 1</th>
                                     <th scope="col" style="width: 13%">Pembimbing 2</th>
-                                    <th scope="col" style="width: 10%" class="text-center">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -55,10 +48,6 @@
                                         <td><?= $sp['tahun']; ?></td>
                                         <td><?= $sp['pembimbing_1']; ?></td>
                                         <td><?= $sp['pembimbing_2']; ?></td>
-                                        <td align="center">
-                                            <a href="" class="badge badge-success edit">edit</a>
-                                            <a href="<?= base_url('admin/hapusdata/') ?><?= $sp['id']; ?>" class="badge badge-danger hapus">hapus</a>
-                                        </td>
                                     </tr>
                                     <?php $i++; ?>
                                 <?php endforeach; ?>

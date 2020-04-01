@@ -2,7 +2,7 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <div class="text-right">
+    <div class="text-right cetak">
         <a href="<?= base_url('admin/cetaklabel'); ?>" target="_blank" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Cetak Label</a>
     </div>
 

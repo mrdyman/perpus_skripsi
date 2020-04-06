@@ -24,3 +24,23 @@ $(".hapus").on("click", function (e) {
 		}
 	});
 });
+
+$(".cetak").on("click", function (e) {
+	// matikan hrefnya untuk sementara
+	e.preventDefault();
+	const href = "http://localhost/perpus_skripsi/admin/CetakLabel";
+
+	Swal.fire({
+		title: "Apakah anda yakin?",
+		text: "Label akan dicetak dan akan dihapus dari daftar",
+		icon: "warning",
+		showCancelButton: true,
+		confirmButtonColor: "#3085d6",
+		cancelButtonColor: "#d33",
+		confirmButtonText: "Ya, cetak!",
+	}).then((result) => {
+		if (result.value) {
+			document.location.href = href;
+		}
+	});
+});

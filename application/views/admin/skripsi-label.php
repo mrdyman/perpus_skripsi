@@ -36,7 +36,7 @@
                                     <th scope="col">Tahun</th>
                                     <th scope="col" style="width: 13%">Pembimbing 1</th>
                                     <th scope="col" style="width: 13%">Pembimbing 2</th>
-                                    <th scope="col" style="width: 10%" class="text-center">Aksi</th>
+                                    <!-- <th scope="col" style="width: 10%" class="text-center">Aksi</th> -->
                                 </tr>
                             </thead>
                             <tbody>
@@ -52,10 +52,10 @@
                                         <td><?= $sl['tahun']; ?></td>
                                         <td><?= $sl['pembimbing_1']; ?></td>
                                         <td><?= $sl['pembimbing_2']; ?></td>
-                                        <td align="center">
+                                        <!-- <td align="center">
                                             <a href="" class="badge badge-success edit">edit</a>
                                             <a href="<?= base_url('admin/hapusdata/') ?><?= $sl['id']; ?>" class="badge badge-danger hapus">hapus</a>
-                                        </td>
+                                        </td> -->
                                     </tr>
                                     <?php $i++; ?>
                                 <?php endforeach; ?>
